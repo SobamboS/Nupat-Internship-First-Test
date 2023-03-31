@@ -2,12 +2,7 @@
 const express = require('express');
 const app = express();
 
-// To load environment variable 
-if(process.env.NODE_ENV != 'production'){
-    require('dotenv').load()
-}
 
-//const apiKey = process.env.RAPID_API_KEY
 
 // Importing routes
 const hello = require('./routes/hello');
