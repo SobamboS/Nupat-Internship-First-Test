@@ -14,7 +14,7 @@ const Api_Key = process.env.RAPID_API_KEY
 
 
     // feeds/autocomplete
-router.get(`/feed/autocomplete`, async function (req, res) {
+router.get(`/feeds/autocomplete`, async function (req, res) {
     const url = 'https://yummly2.p.rapidapi.com/feeds/auto-complete?q=chicken%20soup';
 
     const options = {
@@ -42,13 +42,14 @@ router.get(`/feed/autocomplete`, async function (req, res) {
             res.status(500).json({msg: `Internal Server Error.`});
         }
     }
+
 });
 
 
 
 
 //  feeds/search
-router.get(`/feed/search`, async function (req, res) {
+router.get(`/feeds/search`, async function (req, res) {
 const url = 'https://yummly2.p.rapidapi.com/feeds/search?start=0&maxResult=18&maxTotalTimeInSeconds=7200&q=chicken%20soup&allowedAttribute=diet-lacto-vegetarian%2Cdiet-low-fodmap&FAT_KCALMax=1000';
 
 const options = {
@@ -81,7 +82,7 @@ try {
 
 
 // Feeds/List
-router.get(`/feed/list`, async function (req, res) {
+router.get(`/feeds/list`, async function (req, res) {
 const url = 'https://yummly2.p.rapidapi.com/feeds/list?limit=24&start=0';
 
 const options = {
@@ -114,7 +115,7 @@ try {
 
 
 // feeds/list-similarities
-router.get(`/feed/list-similarities`, async function (req, res) {
+router.get(`/feeds/list-similarities`, async function (req, res) {
 const url = 'https://yummly2.p.rapidapi.com/feeds/list-similarities?limit=18&start=0&id=15-Minute-Baked-Salmon-with-Lemon-9029477&apiFeedType=moreFrom&authorId=Yummly';
 
 const options = {

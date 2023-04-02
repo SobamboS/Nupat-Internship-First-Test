@@ -9,13 +9,14 @@ const hello = require('./routes/hello');
 
 
 // Adding routes
-app.use('/feed/autocomplete', hello);
-app.use('/feed/search', hello);
-app.use('/feed/list',hello);
-app.use('/feed/list-similarities',hello);
-app.use('/tag/list',hello);
-app.use('/categories/list',hello);
-app.use('/reviews/list',hello);
+app.get('/feeds/autocomplete', hello);
+app.get('/feeds/search', hello);
+app.get('/feeds/list',hello);
+app.get('/feeds/list-similarities',hello);
+app.get('/tag/list',hello);
+app.get('/categories/list',hello);
+app.get('/reviews/list',hello);
+
 
 //Middleware
 app.use(express.json());
